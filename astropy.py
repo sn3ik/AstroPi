@@ -2,7 +2,8 @@ import csv
 import sys
 import os
 
-def main()
+def main():
+    menu()
 
 def menu():
     print()
