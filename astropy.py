@@ -2,7 +2,9 @@ import csv
 import sys
 import os
 
-def main():
+def main()
+
+def menu():
     print()
     print("*******************************************")
     print("*                                         *")
