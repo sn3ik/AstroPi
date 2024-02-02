@@ -186,6 +186,7 @@ def indi3rdparty():
     os.chdir("build-indi-3rdparty")
     os.system("make || { echo 'INDI 3dparty compilation failed'; exit 1; }")
     os.system("sudo make install || { echo 'INDI 3dparty installation failed'; exit 1; }")
+    os.chdir("..")
     print('\033[92m'"INDI 3dparty installato con successo'\033[0m'")    
 pass
 
