@@ -1,0 +1,1 @@
+/usr/bin/cc -rdynamic CMakeFiles/fxload.dir/main.c.o CMakeFiles/fxload.dir/ezusb.c.o -o fxload 

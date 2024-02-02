@@ -1,0 +1,2 @@
+/usr/sbin/fxload
+/usr/share/usb/a3load.hex

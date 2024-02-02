@@ -1,0 +1,7 @@
+/home/astropi/Desktop/fxload/build/CMakeFiles/fxload.dir
+/home/astropi/Desktop/fxload/build/CMakeFiles/edit_cache.dir
+/home/astropi/Desktop/fxload/build/CMakeFiles/rebuild_cache.dir
+/home/astropi/Desktop/fxload/build/CMakeFiles/list_install_components.dir
+/home/astropi/Desktop/fxload/build/CMakeFiles/install.dir
+/home/astropi/Desktop/fxload/build/CMakeFiles/install/local.dir
+/home/astropi/Desktop/fxload/build/CMakeFiles/install/strip.dir
