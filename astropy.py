@@ -3,10 +3,6 @@ import sys
 import os
 
 def main():
-   menu()
-
-
-def menu():
     print()
     print("*******************************************")
     print("*                                         *")
@@ -51,9 +47,9 @@ def automatic():
     if choice=="S" or choice=="s":
         dependencies()
 
-        if not os.path.exists("AstroPi"):
-            os.system("mkdir AstroPi")
-            os.chdir("AstroPi")
+        #if not os.path.exists("AstroPi"):
+        #    os.system("mkdir AstroPi")
+        #    os.chdir("AstroPi")
         
         fxload()
         indi()
@@ -69,9 +65,9 @@ pass
     
 def manual():
     
-    if not os.path.exists("AstroPi"):
-        os.system("mkdir AstroPi")
-        os.chdir("AstroPi")
+    #if not os.path.exists("AstroPi"):
+    #    os.system("mkdir AstroPi")
+    #    os.chdir("AstroPi")
     print()
     print("Software disponibili:")
     choice = input("""
@@ -87,6 +83,7 @@ def manual():
     
     if choice=="0":
         dependencies()
+        menu()
     elif choice=="1":
         fxload()
         menu()
@@ -143,8 +140,8 @@ def dependencies():
 pass
 
 def fxload():
-    os.system("wget https://francescocangiani.com/osservatorio/fxload.zip")
-    os.system("unzip fxload.zip")
+    #os.system("wget https://francescocangiani.com/osservatorio/fxload.zip")
+    #os.system("unzip fxload.zip")
     os.chdir("fxload")
     os.system("cmake -B build -S . -DCMAKE_INSTALL_PREFIX=/usr || { echo 'fxload compilation failed'; exit 1; }")
     os.system("cmake --build ./build || { echo 'fxload compilation failed'; exit 1; }")
