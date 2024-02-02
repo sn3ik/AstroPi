@@ -12,7 +12,6 @@ def menu():
     print("*                                         *")
     print("*******************************************")
 
-
     choice = input("""
        A: Installazione automatica
        M: Installazione manuale
@@ -51,8 +50,7 @@ def automatic():
 
         #if not os.path.exists("AstroPi"):
         #    os.system("mkdir AstroPi")
-        #    os.chdir("AstroPi")
-        
+        #    os.chdir("AstroPi")        
         fxload()
         indi()
         indi3rdparty()
@@ -105,8 +103,7 @@ def manual():
         phd2()
         menu()
     else:
-        menu()
-   
+        menu()  
 pass
     
 def hotspot():
@@ -125,7 +122,6 @@ def hotspot():
         hotspot_off()
     else:
         sys.exit
-
 pass
 
 def dependencies():
@@ -137,20 +133,16 @@ def dependencies():
         libkf5newstuff-dev libkf5doctools-dev libkf5notifications-dev qtdeclarative5-dev libkf5crash-dev gettext libkf5notifyconfig-dev \
         wcslib-dev libqt5websockets5-dev xplanet xplanet-images qt5keychain-dev libsecret-1-dev breeze-icon-theme qml-module-qtquick-controls \
         pkg-config libev-dev libqt5datavisualization5-dev libzmq3-dev libzstd-dev ")
-        
     print('\033[92m'"Librerire installate con successo'\033[0m'")
 pass
 
 def fxload():
-    #os.system("wget https://francescocangiani.com/osservatorio/fxload.zip")
-    #os.system("unzip fxload.zip")
     os.chdir("fxload")
     os.system("cmake -B build -S . -DCMAKE_INSTALL_PREFIX=/usr || { echo 'fxload compilation failed'; exit 1; }")
     os.system("cmake --build ./build || { echo 'fxload compilation failed'; exit 1; }")
     os.system("sudo cmake --install ./build|| { echo 'fxload compilation failed'; exit 1; } ")
     os.chdir("..")
     print('\033[92m'"fxload installato con successo'\033[0m'")
-
 pass
 
 def libxisf():
@@ -163,8 +155,7 @@ def libxisf():
     os.system("make || { echo 'ISF compilation failed'; exit 1; }")
     os.system("sudo make install || { echo 'libXISF installation failed'; exit 1; }")
     os.chdir("..")
-    print('\033[92m'"libXISF installato con successo'\033[0m'")
-    
+    print('\033[92m'"libXISF installato con successo'\033[0m'") 
 pass
 
 def indi():
@@ -177,8 +168,7 @@ def indi():
     os.system("make || { echo 'INDI compilation failed'; exit 1; }")
     os.system("sudo make install || { echo 'INDI installation failed'; exit 1; }")
     os.chdir("..")
-    print('\033[92m'"INDI installato con successo'\033[0m'")
-    
+    print('\033[92m'"INDI installato con successo'\033[0m'")    
 pass
 
 def indi3rdparty():
@@ -196,9 +186,7 @@ def indi3rdparty():
     os.chdir("build-indi-3rdparty")
     os.system("make || { echo 'INDI 3dparty compilation failed'; exit 1; }")
     os.system("sudo make install || { echo 'INDI 3dparty installation failed'; exit 1; }")
-    
-    print('\033[92m'"INDI 3dparty installato con successo'\033[0m'")
-    
+    print('\033[92m'"INDI 3dparty installato con successo'\033[0m'")    
 pass
 
 def stellarsolver():
@@ -212,7 +200,6 @@ def stellarsolver():
     os.system("sudo make install || { echo 'Stellarsolver installation failed'; exit 1; }")
     os.chdir("..")
     print('\033[92m'"Stellarsolver installato con successo'\033[0m'")
-    
 pass
 
 def kstars():
@@ -225,8 +212,7 @@ def kstars():
     os.system("make || { echo 'Kstars compilation failed'; exit 1; }")
     os.system("sudo make install || { echo 'Kstars installation failed'; exit 1; }")
     os.chdir("..")
-    print('\033[92m'"Kstars installato con successo'\033[0m'")
-    
+    print('\033[92m'"Kstars installato con successo'\033[0m'")   
 pass
 
 def phd2():
@@ -239,9 +225,7 @@ def phd2():
     os.system("make || { echo 'PHD2 compilation failed'; exit 1; }")
     os.system("sudo make install || { echo 'PHD2 installation failed'; exit 1; }")
     os.chdir("..")
-    print('\033[92m'"PHD2 installato con successo'\033[0m'")
-    
+    print('\033[92m'"PHD2 installato con successo'\033[0m'")   
 pass
     
-#the program is initiated, so to speak, here
 main()
