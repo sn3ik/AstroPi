@@ -16,7 +16,6 @@ def menu():
     choice = input("""
        A: Installazione automatica
        M: Installazione manuale
-       H: Hotspot
        Q: Esci
 
        Digita la tua scelta: """)
@@ -25,8 +24,8 @@ def menu():
         automatic()
     elif choice == "M" or choice =="m":
         manual()
-    elif choice == "H" or choice =="h":
-        hotspot()    
+    #elif choice == "H" or choice =="h":
+    #    hotspot()    
     elif choice=="Q" or choice=="q":
         sys.exit
     else:
