@@ -57,6 +57,7 @@ def automatic():
         stellarsolver()
         kstars()
         phd2()
+        os.system("sudo ldconfig")
         menu()
 
     else:
