@@ -218,6 +218,8 @@ def kstars():
 pass
 
 def phd2():
+    os.system("apt remove cmake -y")
+    os.system("pip install cmake --upgrade")
     os.system("sudo apt-get install build-essential subversion cmake pkg-config libwxgtk3.0-gtk3-dev wx-common wx3.0-i18n libindi-dev libnova-dev zlib1g-dev")
     os.system("git clone https://github.com/OpenPHDGuiding/phd2.git")
     os.chdir("phd2")
