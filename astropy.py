@@ -216,11 +216,11 @@ def kstars():
     os.chdir("..")
     print('\033[92m'"Kstars installato con successo'\033[0m'")   
 pass
-
 def phd2():
     os.system("apt remove cmake -y")
     os.system("pip install cmake --upgrade")
-    os.system("sudo apt-get install build-essential subversion cmake pkg-config libwxgtk3.0-gtk3-dev wx-common wx3.0-i18n libindi-dev libnova-dev zlib1g-dev libopencv-dev")
+    os.system("sudo apt install cmake")
+    os.system("sudo apt-get install build-essential subversion pkg-config libwxgtk3.2-dev wx-common wx3.2-i18n libindi-dev libnova-dev zlib1g-dev libopencv-dev")
     os.system("git clone https://github.com/OpenPHDGuiding/phd2.git")
     os.chdir("phd2")
     os.system("cmake -B ../build-phd2 ../phd2 -DUSE_SYSTEM_LIBINDI=1 -DCMAKE_BUILD_TYPE=Release || { echo 'PHD2 configuration failed'; exit 1; }")
